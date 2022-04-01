@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+
+    <record id="report_dessert_order" model="ir.actions.report">
+        <field name="name">Invoice</field>
+        <field name="model">dessert.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">radiantdessert.report_dessert_order</field>
+        <field name="report_file">radiantdessert.report_dessert_order</field>
+        <field name="binding_model_id" ref="model_dessert_order"/>
+        <field name="binding_type">report</field>
+    </record>
+
+
+</odoo>

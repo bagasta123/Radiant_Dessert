@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <!-- dessert.payment tree view -->
+    <record id="dessert_payment_view_tree" model="ir.ui.view">
+        <field name="name">Order Payment</field>
+        <field name="model">dessert.payment</field>
+        <field name="arch" type="xml">
+            <tree delete="false">
+                <!-- Add your fields here -->
+                    <field name="order_id"/>
+                    <field name="name"/>
+                    <field name="date_pay"/>
+                    <field name="bill"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- dessert.payment form view -->
+    <record id="dessert_payment_view_form" model="ir.ui.view">
+        <field name="name">Already Paid</field>
+        <field name="model">dessert.payment</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet> 
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="order_id"/>
+                        <field name="name"/>
+                    </group>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="date_pay"/>
+                    </group>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="bill"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- dessert.payment action window -->
+    <record id="dessert_payment_action" model="ir.actions.act_window">
+        <field name="name">Order Payment</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">dessert.payment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+    id="dessert_payment_menu_act"
+    name="Payment"
+    parent="dessert_order_menu_categ" 
+    action="dessert_payment_action"
+    sequence="20"/>
+
+</odoo>

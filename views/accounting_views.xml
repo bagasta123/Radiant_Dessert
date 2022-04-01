@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <!-- dessert.accounting tree view -->
+    <record id="dessert_accounting_view_tree" model="ir.ui.view">
+        <field name="name">Accounting Radiant Dessert</field>
+        <field name="model">dessert.accounting</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="date"/>
+                <field name="debit"/>
+                <field name="credit"/>
+                <field name="balance"/>
+
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- dessert.accounting action window -->
+    <record id="dessert_accounting_action" model="ir.actions.act_window">
+        <field name="name">Accounting</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">dessert.accounting</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem
+    id="dessert_accounting_menu_act"
+    name="Accounting"
+    parent="dessert_accounting_menu_categ"
+    action="dessert_accounting_action"
+    sequence="10"/>
+    
+</odoo>
