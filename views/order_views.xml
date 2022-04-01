@@ -9,7 +9,7 @@
             <tree> 
                 <!-- Add your fields here -->
                 <header> 
-                  <button name="already_paid" string="Already Paid" class="btn btn-success" type="object"/>
+                  <button name="invoice" string="Already Paid" class="btn btn-success" type="object"/>
                 </header>
                 <field name="name"/>
                 <field name="cust"/>

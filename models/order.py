@@ -21,7 +21,7 @@ class Order(models.Model):
     order_date = fields.Datetime(string='Order Date', default=fields.Datetime.now())
     cust = fields.Many2one(
         comodel_name='res.partner', 
-        string='Customer Name', 
+        string='Customer', 
         domain=[('radiant_customer', '=', True)],
         store=True)
     

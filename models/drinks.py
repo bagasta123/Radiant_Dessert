@@ -8,5 +8,5 @@ class Drinks(models.Model):
     name = fields.Char(string='Drink Name')
     desc = fields.Char(string='Description of Drink')
     price = fields.Integer(string='Price')
-    stock = fields.Integer(string='Ice Cream Stock')
+    stock = fields.Integer(string='Drinks Stock')
     
